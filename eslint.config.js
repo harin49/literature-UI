@@ -21,6 +21,7 @@ module.exports = {
         "react/jsx-props-no-spreading": OFF,
         "react/no-multi-comp": ERROR,
         "react/forbid-prop-types": OFF,
+        "import/no-unresolved": ERROR
     },
     parser: "babel-eslint",
 }   
