@@ -56,7 +56,9 @@
     "test": "node scripts/test.js",
     "lint": "eslint --cache --config ./eslint.config.js ./src/",
     "lint:fix": "yarn lint --quiet --fix",
-    "lint:no-cache": "eslint --config  --quiet ./eslint.config.js ./src/"
+    "lint:no-cache": "eslint --config  --quiet ./eslint.config.js ./src/",
+    "prettier": "prettier --check \"src/**/*.js\"",
+    "prettier:fix": "prettier --write \"src/**/*.js\""
   },
   "browserslist": {
     "production": [

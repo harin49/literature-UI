@@ -1,0 +1,4 @@
+src/**/*.test.js
+src/**/*.css
+src/serviceWorker.js
+src/setupTests.js
