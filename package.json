@@ -138,10 +138,23 @@
     "eslint-plugin-jsx-control-statements": "^2.2.1",
     "eslint-plugin-react": "^7.20.6",
     "eslint-plugin-react-hooks": "^4.1.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
     "prettier": "2.0.5"
   },
   "eslintIgnore": [
     "src/serviceWorker.js",
     "src/*.test.js"
-  ]
+  ],
+  "lint-staged":{
+    "src/**/*.js":[
+      "prettier --check \"src/**/*.js\"",
+      "eslint --cache --config ./eslint.config.js ./src/"
+    ]
+  },
+  "husky":{
+    "hooks":{
+      "pre-commit":"lint-staged"
+    }
+  }
 }
