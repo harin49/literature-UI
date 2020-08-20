@@ -3,15 +3,11 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@babel/core": "7.9.0",
     "@svgr/webpack": "4.3.3",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "babel-jest": "^24.9.0",
-    "babel-loader": "8.1.0",
-    "babel-plugin-named-asset-import": "^0.3.6",
-    "babel-preset-react-app": "^9.1.2",
     "camelcase": "^5.3.1",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
     "css-loader": "3.4.2",
@@ -128,7 +124,17 @@
     ]
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@babel/plugin-proposal-export-default-from": "^7.10.4",
+    "@babel/preset-env": "^7.11.0",
+    "@babel/preset-react": "^7.10.4",
     "babel-eslint": "^10.1.0",
+    "babel-loader": "^8.1.0",
+    "babel-plugin-jsx-control-statements": "^4.1.0",
+    "babel-plugin-named-asset-import": "^0.3.6",
+    "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
+    "babel-plugin-transform-remove-console": "^6.9.4",
+    "babel-preset-react-app": "^9.1.2",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -146,15 +152,15 @@
     "src/serviceWorker.js",
     "src/*.test.js"
   ],
-  "lint-staged":{
-    "src/**/*.js":[
+  "lint-staged": {
+    "src/**/*.js": [
       "prettier --check \"src/**/*.js\"",
       "eslint --cache --config ./eslint.config.js ./src/"
     ]
   },
-  "husky":{
-    "hooks":{
-      "pre-commit":"lint-staged"
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
     }
   }
 }
