@@ -1,0 +1,8 @@
+@tailwind base;
+
+body {
+    height: 100vh;
+};
+
+@tailwind components;
+@tailwind utilities;

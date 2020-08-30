@@ -54,7 +54,12 @@
     "lint:fix": "yarn lint --quiet --fix",
     "lint:no-cache": "eslint --config  --quiet ./eslint.config.js ./src/",
     "prettier": "prettier --check \"src/**/*.js\"",
-    "prettier:fix": "prettier --write \"src/**/*.js\""
+    "prettier:fix": "prettier --write \"src/**/*.js\"",
+    "build:css": "tailwind build src/tailwind.css -o src/index.css",
+    "watch:css": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/index.css -c 'npm run build:css'",
+    "start:all": "concurrently 'yarn watch:css' 'yarn start'",
+    "prebuild": "yarn build:css",
+    "prestart": "yarn build:css"
   },
   "browserslist": {
     "production": [
@@ -135,6 +140,8 @@
     "babel-plugin-transform-react-remove-prop-types": "^0.4.24",
     "babel-plugin-transform-remove-console": "^6.9.4",
     "babel-preset-react-app": "^9.1.2",
+    "chokidar-cli": "^2.1.0",
+    "concurrently": "^5.3.0",
     "eslint": "^7.7.0",
     "eslint-config-airbnb": "^18.2.0",
     "eslint-config-prettier": "^6.11.0",
@@ -146,7 +153,8 @@
     "eslint-plugin-react-hooks": "^4.1.0",
     "husky": "^4.2.5",
     "lint-staged": "^10.2.11",
-    "prettier": "2.0.5"
+    "prettier": "2.0.5",
+    "tailwindcss": "^1.7.6"
   },
   "eslintIgnore": [
     "src/serviceWorker.js",
