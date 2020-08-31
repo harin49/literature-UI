@@ -26,4 +26,4 @@ yarn-error.log*
 .eslintcache
 
 # tailwindcss file
-/src/index.css
+src/index.css
