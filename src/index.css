@@ -590,7 +590,7 @@ video {
   height: auto;
 }
 
-body {
+body, #root {
   height: 100vh;
 };
 
@@ -22225,6 +22225,13 @@ body {
 .animate-bounce {
   -webkit-animation: bounce 1s infinite;
           animation: bounce 1s infinite;
+}
+
+.bg-main-custom {
+  background-image: url("./assets/backgroundPattern.svg");
+  background-color: #FAFAFA;
+  background-repeat: repeat;
+  background-size: 80px;
 }
 
 @media (min-width: 640px) {

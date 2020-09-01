@@ -1,8 +1,15 @@
 @tailwind base;
 
-body {
+body, #root {
     height: 100vh;
 };
 
 @tailwind components;
 @tailwind utilities;
+
+.bg-main-custom {
+    background-image: url("./assets/backgroundPattern.svg");
+    background-color: #FAFAFA;
+    background-repeat: repeat;
+    background-size: 80px;
+  }

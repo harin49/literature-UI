@@ -57,9 +57,8 @@
     "prettier:fix": "prettier --write \"src/**/*.js\"",
     "build:css": "tailwind build src/tailwind.css -o src/index.css",
     "watch:css": "chokidar 'src/**/*.css' 'src/**/*.scss' --ignore src/index.css -c 'npm run build:css'",
-    "start:all": "concurrently 'yarn watch:css' 'yarn start'",
-    "prebuild": "yarn build:css",
-    "prestart": "yarn build:css"
+    "start:all": "concurrently 'yarn watch:css' 'yarn build:css && yarn start'",
+    "prebuild": "yarn build:css"
   },
   "browserslist": {
     "production": [
