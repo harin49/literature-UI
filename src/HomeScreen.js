@@ -4,7 +4,7 @@ import HomeBox from './components/HomeBox';
 
 const HomeScreen = () => {
   return (
-    <div className="h-screen m-portrait:hidden sm:flex justify-center items-center">
+    <div className="h-full m-portrait:hidden sm:flex justify-center items-center">
       <HomeBox />
     </div>
   );

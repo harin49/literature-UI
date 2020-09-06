@@ -1,7 +1,8 @@
 @tailwind base;
 
-body, #root {
-    height: 100vh;
+html, body {
+    height:100%;
+    overflow:auto;
 };
 
 @tailwind components;

@@ -2,7 +2,7 @@ import React from 'react';
 
 const HomeBox = () => {
   return (
-    <div id="HomeBox" className="sm:flex sm:flex-col w-2/6 h-auto items-center justify-center">
+    <div id="HomeBox" className="sm:flex sm:flex-col w-2/6 items-center justify-center">
       <button
         type="button"
         className="mt-6 bg-blue-500 hover:bg-blue-700 text-base sm:text-sm md:text-lg text-white font-bold py-2 px-4 rounded-lg shadow-xl w-40"
