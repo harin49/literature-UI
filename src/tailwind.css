@@ -1,7 +1,8 @@
 @tailwind base;
 
-body, #root {
-    height: 100vh;
+html, body {
+    height:100%;
+    overflow:auto;
 };
 
 @tailwind components;
@@ -9,7 +10,7 @@ body, #root {
 
 .bg-main-custom {
     background-image: url("./assets/backgroundPattern.svg");
-    background-color: #FAFAFA;
+    background-color: #b23a48;
     background-repeat: repeat;
     background-size: 80px;
   }
