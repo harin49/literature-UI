@@ -8,6 +8,13 @@ module.exports = {
       colors: {
         'c1-gray': '#3a3a3a',
       },
+      fontFamily: {
+        tangerine: ['Tangerine', 'sans-serif'],
+      },
+      fontSize: {
+        'tangerine-text': '2rem',
+        'tangerine-header': '8rem',
+      },
     },
   },
   variants: {},

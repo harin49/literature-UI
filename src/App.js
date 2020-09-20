@@ -5,7 +5,7 @@ import MobilePortraitScreen from './MobilePortraitScreen';
 
 const App = () => {
   return (
-    <div className="h-full bg-main-custom overflow-auto">
+    <div className="h-full bg-main-custom overflow-auto font-tangerine">
       <MobilePortraitScreen />
       <HomeScreen />
     </div>
