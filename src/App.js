@@ -1,14 +1,19 @@
 import React from 'react';
 import './App.css';
-import HomeScreen from './HomeScreen';
-import MobilePortraitScreen from './MobilePortraitScreen';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { mainRoutes } from './routes';
 
 const App = () => {
   return (
-    <div className="h-full bg-main-custom overflow-auto font-tangerine">
-      <MobilePortraitScreen />
-      <HomeScreen />
-    </div>
+    <Router>
+      <div className="h-full bg-main-custom overflow-auto font-tangerine">
+        <Switch>
+          {mainRoutes.map((item) => (
+            <Route path={item.path} component={item.component} />
+          ))}
+        </Switch>
+      </div>
+    </Router>
   );
 };
 

@@ -1,9 +1,17 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
 const HomeBox = () => {
+  const history = useHistory();
+
+  const routeHandler = (path) => {
+    history.push(path);
+  };
+
   return (
     <div id="HomeBox" className="sm:flex sm:flex-col w-2/6 items-center justify-center">
       <button
+        onClick={() => routeHandler('/create')}
         type="button"
         className="mt-6 bg-blue-500 hover:bg-blue-700 text-base sm:text-xl lg:text-tangerine-text text-white font-bold rounded-lg shadow-xl sm:w-32 lg:w-40"
       >
